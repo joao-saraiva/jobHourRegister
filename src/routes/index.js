@@ -1,5 +1,7 @@
 import express from "express";
 import PersonRoutes from "./PersonsRoutes.js";
+import EmployersRoutes from "./EmployersRoutes.js";
+import CompaniesRoutes from './CompaniesRoutes.js';
 
 const routes = (app) => {
   app.route('/').get((req, res) => {
@@ -8,7 +10,9 @@ const routes = (app) => {
 
   app.use(
     express.json(),
-    PersonRoutes
+    PersonRoutes,
+    EmployersRoutes,
+    CompaniesRoutes
   )
 }
 
