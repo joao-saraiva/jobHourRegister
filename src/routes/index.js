@@ -2,6 +2,7 @@ import express from "express";
 import PersonRoutes from "./PersonsRoutes.js";
 import EmployersRoutes from "./EmployersRoutes.js";
 import CompaniesRoutes from './CompaniesRoutes.js';
+import CheckinRoutes from './CheckinsRoutes.js';
 
 const routes = (app) => {
   app.route('/').get((req, res) => {
@@ -12,7 +13,8 @@ const routes = (app) => {
     express.json(),
     PersonRoutes,
     EmployersRoutes,
-    CompaniesRoutes
+    CompaniesRoutes,
+    CheckinRoutes
   )
 }
 
